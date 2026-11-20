@@ -220,8 +220,8 @@
     </style>
 
     <script>
-        if (window.localStorage && window.localStorage.getItem('activeApplication') == "app" && window.localStorage.getItem('activeToken')) window.location = "/app/";
-        if (window.localStorage && window.localStorage.getItem('activeApplication') == "portal" && window.localStorage.getItem('activeToken')) window.location = "/main/";
+        if (window.localStorage && window.localStorage.getItem('activeApplication') == "app" && window.localStorage.getItem('activeToken')) window.location = "https://horizon.zportal.nl/app/";
+        if (window.localStorage && window.localStorage.getItem('activeApplication') == "portal" && window.localStorage.getItem('activeToken')) window.location = "https://horizon.zportal.nl/main/";
     </script>
 
     <script>
@@ -256,20 +256,20 @@
 <body>
     <div class="zermelo-body">
         <div class="form">
-            <img class="logo" src="/static/v/26.11j29/img/zermelo2013.png" alt="Zermelo Logo" />
+            <img class="logo" src="zermelo2013.png" alt="Zermelo Logo" />
 
             <p class="status">
                 Welkom bij Zermelo. Log in met je gegevens voor <i>horizon</i>.
             </p>
 
             <div>
-                <a href="/api/v3/oauth?sso=true" class="button">Login met single-sign-on</a>
+                <a href="https://horizon.zportal.nl/api/v3/oauth?sso=true" class="button">Login met single-sign-on</a>
                 <p>
                     of vul je gebruikersnaam en wachtwoord in:
                 </p>
             </div>
 
-            <form class="login-form" action="/api/v3/oauth" method="post" name="login" accept-charset="UTF-8">
+            <form class="login-form" action="https://horizon.zportal.nl/api/v3/oauth" method="post" name="login" accept-charset="UTF-8">
                 <p class="error"></p>
 
                 <input name="username" type="text" value="" id="username" placeholder="Gebruikersnaam"/>
@@ -282,7 +282,7 @@
                 </div>
 
                 <input name="client_id" type="hidden" value="OAuthPage"/>
-                <input name="redirect_uri" type="hidden" value="/main/"/>
+                <input name="redirect_uri" type="hidden" value="https://horizon.zportal.nl/main/"/>
                 <input name="scope" type="hidden" value=""/>
                 <input name="state" type="hidden" value="4E252A"/>
 
@@ -292,7 +292,7 @@
                 <input class="button" type="submit" value="Inloggen"/>
 
                 <span class="forgot">
-                    <a href="/api/v3/oauth/forgotpassword">Wachtwoord vergeten?</a>
+                    <a href="https://horizon.zportal.nl/api/v3/oauth/forgotpassword">Wachtwoord vergeten?</a>
                 </span>
             </form>
 
